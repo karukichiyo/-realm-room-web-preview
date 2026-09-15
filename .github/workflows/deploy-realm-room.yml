@@ -1,0 +1,50 @@
+name: Deploy Realm Room Web
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/deploy-realm-room.yml"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: realm-room-pages
+  cancel-in-progress: true
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download verified Godot Web build
+        run: curl --fail --location --retry 3 'https://sdmntprjapaneast.oaiusercontent.com/files/00000000-42b8-8209-9ca0-776c11e61337/raw?se=2026-09-15T18%3A39%3A56Z&sp=r&sv=2026-02-06&sr=b&scid=01a0a659-4441-752f-a288-872708283437&skoid=9063adf3-a524-4acf-b70a-8731b33f2f50&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-15T18%3A11%3A40Z&ske=2026-09-16T18%3A11%3A40Z&sks=b&skv=2026-02-06&sig=YNe8jpPVs2wXqUjS1rbgA8UTx7VWmOSMGpaOjfLTxmY%3D' --output realm-room-web.zip
+      - name: Extract site
+        run: |
+          mkdir -p site
+          unzip -q realm-room-web.zip -d site
+          test -f site/index.html
+          test -f site/index.wasm
+          test -f site/index.pck
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: prepare
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
