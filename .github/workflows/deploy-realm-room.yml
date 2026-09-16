@@ -35,11 +35,7 @@ jobs:
           mv site/index.wasm "site/${runtime}.wasm"
           mv site/index.audio.worklet.js "site/${runtime}.audio.worklet.js"
           mv site/index.audio.position.worklet.js "site/${runtime}.audio.position.worklet.js"
-          sed -i \\
-            -e "s/\\\"executable\\\":\\\"index\\\"/\\\"executable\\\":\\\"${runtime}\\\"/" \\
-            -e "s/\\\"index.pck\\\"/\\\"${runtime}.pck\\\"/" \\
-            -e "s/\\\"index.wasm\\\"/\\\"${runtime}.wasm\\\"/" \\
-            site/index.html
+          sed -i -e 's/"executable":"index"/"executable":"'"${runtime}"'"/' -e 's/"index.pck"/"'"${runtime}"'.pck"/' -e 's/"index.wasm"/"'"${runtime}"'.wasm"/' site/index.html
           test -f "site/${runtime}.pck"
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
