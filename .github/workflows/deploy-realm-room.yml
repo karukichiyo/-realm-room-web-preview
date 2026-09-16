@@ -2,8 +2,8 @@ name: Deploy Realm Room Web
 
 on:
   workflow_dispatch:
-  release:
-    types: [published]
+  repository_dispatch:
+    types: [realm-room-web-preview]
 
 permissions:
   contents: read
