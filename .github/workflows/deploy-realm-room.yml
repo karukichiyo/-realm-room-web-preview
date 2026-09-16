@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download verified Godot Web build
-        run: curl --fail --location --retry 3 'https://sdmntprseasia.oaiusercontent.com/files/00000000-3560-8207-b63c-298c2a09f254/raw?se=2026-09-16T06%3A22%3A22Z&sp=r&sv=2026-02-06&sr=b&scid=01a0a8d7-9e1c-751c-8d45-038d7efd4986&skoid=9063adf3-a524-4acf-b70a-8731b33f2f50&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-16T05%3A35%3A56Z&ske=2026-09-17T05%3A35%3A56Z&sks=b&skv=2026-02-06&sig=aw%2BP/h6a2cBYXqDaBOdF3KuY4m6N4BGJpspbspmvoK4%3D' --output realm-room-web.zip
+        run: curl --fail --location --retry 3 'https://sdmntprcentralus.oaiusercontent.com/files/00000000-39d0-81f5-9de3-108774563ede/raw?se=2026-09-16T06%3A41%3A01Z&sp=r&sv=2026-02-06&sr=b&scid=01a0a8e6-79b6-7cd0-bf3a-8629fdb2fcc7&skoid=9063adf3-a524-4acf-b70a-8731b33f2f50&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-16T00%3A13%3A14Z&ske=2026-09-17T00%3A13%3A14Z&sks=b&skv=2026-02-06&sig=SuNDvlox8m%2BYRHOYtmrycOY/KKMDSYVhBPgFGLK1sVE%3D' --output realm-room-web.zip
       - name: Extract site
         run: |
           mkdir -p site
