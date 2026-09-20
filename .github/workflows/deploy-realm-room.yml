@@ -1,9 +1,10 @@
 name: Deploy Realm Room Web
 
 on:
+  push:
+    branches: [main]
+    paths: ['release.json', '.github/workflows/deploy-realm-room.yml']
   workflow_dispatch:
-  repository_dispatch:
-    types: [realm-room-web-preview]
 
 permissions:
   contents: read
@@ -17,78 +18,49 @@ concurrency:
 jobs:
   prepare:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
     steps:
-      - name: Download verified Web release
+      - uses: actions/checkout@v4
+      - name: Obtain and verify the exact tested Web build
         env:
           GH_TOKEN: ${{ github.token }}
-          PREVIEW_TAG: ${{ github.event.release.tag_name || 'realm-room-web-preview' }}
+          GH_REPO: ${{ github.repository }}
         run: |
-          gh release download "$PREVIEW_TAG" \
-            --repo karukichiyo/-realm-room-web-preview \
-            --pattern realm-room-web.zip \
-            --output realm-room-web.zip
-      - name: Extract site
-        run: |
-          mkdir -p site
-          unzip -q realm-room-web.zip -d site
-          test -f site/index.html
-          test -f site/index.wasm
-          test -f site/index.pck
-          source_sha="${{ github.event.client_payload.source_sha || github.sha }}"
-          revision="${source_sha:0:12}"
-          runtime="realm-room-${revision}"
-          mv site/index.pck "site/${runtime}.pck"
-          mv site/index.wasm "site/${runtime}.wasm"
-          mv site/index.audio.worklet.js "site/${runtime}.audio.worklet.js"
-          mv site/index.audio.position.worklet.js "site/${runtime}.audio.position.worklet.js"
-          sed -i -e 's/"executable":"index"/"executable":"'"${runtime}"'"/' -e 's/"index.pck"/"'"${runtime}"'.pck"/' -e 's/"index.wasm"/"'"${runtime}"'.wasm"/' site/index.html
-          test -f "site/${runtime}.pck"
-          cat > site/sw.js <<EOF
-          const CACHE_NAME = "realm-room-${revision}";
-          const CORE_FILES = ["${runtime}.wasm", "${runtime}.pck"];
-
-          self.addEventListener("install", () => self.skipWaiting());
-
-          self.addEventListener("activate", (event) => {
-            event.waitUntil(
-              caches.keys()
-                .then((keys) => Promise.all(
-                  keys
-                    .filter((key) => key.startsWith("realm-room-") && key !== CACHE_NAME)
-                    .map((key) => caches.delete(key))
-                ))
-                .then(() => self.clients.claim())
-            );
-          });
-
-          self.addEventListener("fetch", (event) => {
-            if (event.request.method !== "GET") return;
-            const url = new URL(event.request.url);
-            const isCoreFile = CORE_FILES.some((file) => url.pathname.endsWith("/" + file));
-            if (!isCoreFile) return;
-
-            event.respondWith(
-              caches.open(CACHE_NAME).then(async (cache) => {
-                const cached = await cache.match(event.request);
-                if (cached) return cached;
-                const response = await fetch(event.request);
-                if (response.ok) await cache.put(event.request, response.clone());
-                return response;
-              })
-            );
-          });
-          EOF
-          sed -i 's#</body>#<script>if ("serviceWorker" in navigator) { navigator.serviceWorker.register("./sw.js"); }</script></body>#' site/index.html
-          test -f site/sw.js
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
+          set -euo pipefail
+          tag=$(jq -r .release_tag release.json)
+          url=$(jq -r .archive_url release.json)
+          checksum=$(jq -r .archive_sha256 release.json)
+          if gh release view "$tag" >/dev/null 2>&1; then
+            gh release download "$tag" --pattern realm-room-web.zip --output realm-room-web.zip
+          else
+            curl --fail --location --retry 3 "$url" --output realm-room-web.zip
+          fi
+          printf '%s  realm-room-web.zip\n' "$checksum" | sha256sum --check
+          python3 - <<'PY'
+          import json,zipfile,pathlib,hashlib
+          meta=json.load(open('release.json'))
+          with zipfile.ZipFile('realm-room-web.zip') as z:
+              for item in z.infolist():
+                  path=pathlib.PurePosixPath(item.filename)
+                  assert not path.is_absolute() and '..' not in path.parts
+              z.extractall('site')
+          site=pathlib.Path('site')
+          assert (site/'index.html').is_file()
+          pck=site/(meta['runtime']+'.pck')
+          assert hashlib.sha256(pck.read_bytes()).hexdigest()==meta['pck_sha256']
+          assert (site/(meta['runtime']+'.wasm')).is_file()
+          PY
+          if ! gh release view "$tag" >/dev/null 2>&1; then
+            gh release create "$tag" realm-room-web.zip --target "$GITHUB_SHA" --title "Realm Room preview9" --notes "Verified preview9 Web build. Account and visiting APIs use the existing live backend."
+          fi
+      - uses: actions/configure-pages@v5
         with:
           enablement: true
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: site
-
   deploy:
     environment:
       name: github-pages
@@ -96,6 +68,5 @@ jobs:
     runs-on: ubuntu-latest
     needs: prepare
     steps:
-      - name: Deploy to GitHub Pages
+      - uses: actions/deploy-pages@v4
         id: deployment
-        uses: actions/deploy-pages@v4

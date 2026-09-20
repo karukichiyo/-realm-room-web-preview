@@ -1,0 +1,11 @@
+{
+  "version": "preview9-pages",
+  "date": "2026-09-20",
+  "runtime": "realm-room-1c80f7103b70",
+  "pck_sha256": "1c80f7103b700a45d6c8f9b29a12ba6fa7accb9b6078c691b390479f10242365",
+  "api_origin": "https://seat-crystal-closely-aberdeen.trycloudflare.com",
+  "archive_url": "https://seat-crystal-closely-aberdeen.trycloudflare.com/realm-room-preview9-1c80f7103b70.zip",
+  "archive_sha256": "71b5371003a48bba5c80f69b0b620db53276d737b8717eedf27ac111672109a0",
+  "release_tag": "preview9-1c80f7103b70",
+  "asset_name": "realm-room-web.zip"
+}
