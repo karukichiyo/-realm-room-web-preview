@@ -28,7 +28,12 @@ for _ in range(file_count):
     cursor += 4
     entries.append((path, offset, size, checksum, flags))
 
-replacements = {str(path): (replacements_dir / path.name).read_bytes() for path in replacement_paths}
+# Include new script dependencies as well as the legacy workflow's explicit list.
+replacement_paths = sorted(set(map(str, replacement_paths)) | {
+    "scripts/" + path.name for path in replacements_dir.iterdir()
+    if path.is_file() and path.suffix in {".gdc", ".remap", ".gdshader"}
+})
+replacements = {str(path): (replacements_dir / Path(path).name).read_bytes() for path in replacement_paths}
 with output_pck.open("wb") as output:
     output.write(raw[:file_base])
     rebuilt = []
