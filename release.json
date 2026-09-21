@@ -1,9 +1,9 @@
 {
-  "version": "preview11-furniture-projection-environment",
+  "version": "preview12-weather-rug-room-grid",
   "date": "2026-09-21",
-  "runtime": "realm-room-5740866f13f2",
-  "pck_sha256": "5740866f13f213edd32dd2334e9e8ad9efdc9461e38e35e64ded86d7b46ca9b6",
-  "pck_size": 18435600,
+  "runtime": "realm-room-8cd103794423",
+  "pck_sha256": "8cd10379442380e892aad4e97fbdaac2ccca94ff1df1e71bfdd720e94c47f667",
+  "pck_size": 18437776,
   "base_runtime": "realm-room-0893b8b5ddcb",
   "base_pck_size": 18423820,
   "base_release_tag": "preview9-0893b8b5ddcb",
