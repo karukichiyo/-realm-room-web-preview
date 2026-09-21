@@ -3,7 +3,7 @@ name: Deploy Realm Room Web
 on:
   push:
     branches: [main]
-    paths: ['release.json', '.github/workflows/deploy-realm-room.yml']
+    paths: ['release.json', 'deploy/**', '.github/workflows/deploy-realm-room.yml']
   workflow_dispatch:
 
 permissions:
@@ -19,42 +19,54 @@ jobs:
   prepare:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: read
       pages: write
     steps:
       - uses: actions/checkout@v4
-      - name: Obtain and verify the exact tested Web build
+      - name: Build the verified preview from the preserved base release
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
         run: |
           set -euo pipefail
-          tag=$(jq -r .release_tag release.json)
-          url=$(jq -r .archive_url release.json)
-          checksum=$(jq -r .archive_sha256 release.json)
-          if gh release view "$tag" >/dev/null 2>&1; then
-            gh release download "$tag" --pattern realm-room-web.zip --output realm-room-web.zip
-          else
-            curl --fail --location --retry 3 "$url" --output realm-room-web.zip
-          fi
-          printf '%s  realm-room-web.zip\n' "$checksum" | sha256sum --check
+          base_tag=$(jq -r .base_release_tag release.json)
+          archive_checksum=$(jq -r .base_archive_sha256 release.json)
+          old_runtime=$(jq -r .base_runtime release.json)
+          runtime=$(jq -r .runtime release.json)
+          gh release download "$base_tag" --pattern realm-room-web.zip --output realm-room-web.zip
+          printf '%s  realm-room-web.zip\n' "$archive_checksum" | sha256sum --check
           python3 - <<'PY'
-          import json,zipfile,pathlib,hashlib
-          meta=json.load(open('release.json'))
-          with zipfile.ZipFile('realm-room-web.zip') as z:
-              for item in z.infolist():
+          import zipfile,pathlib
+          with zipfile.ZipFile('realm-room-web.zip') as archive:
+              for item in archive.infolist():
                   path=pathlib.PurePosixPath(item.filename)
                   assert not path.is_absolute() and '..' not in path.parts
-              z.extractall('site')
-          site=pathlib.Path('site')
-          assert (site/'index.html').is_file()
-          pck=site/(meta['runtime']+'.pck')
-          assert hashlib.sha256(pck.read_bytes()).hexdigest()==meta['pck_sha256']
-          assert (site/(meta['runtime']+'.wasm')).is_file()
+              archive.extractall('site')
           PY
-          if ! gh release view "$tag" >/dev/null 2>&1; then
-            gh release create "$tag" realm-room-web.zip --target "$GITHUB_SHA" --title "Realm Room preview9" --notes "Verified preview9 Web build. Account and visiting APIs use the existing live backend."
-          fi
+          python3 deploy/patch_pck.py "site/$old_runtime.pck" "site/$runtime.pck" deploy/gdc \
+            scripts/room_view.gdc scripts/material_gesture.gdc scripts/room_data.gdc \
+            scripts/console_home.gdc scripts/main.gdc
+          python3 - <<'PY'
+          import hashlib,json,pathlib
+          meta=json.load(open('release.json'))
+          site=pathlib.Path('site')
+          old=meta['base_runtime']; new=meta['runtime']
+          for suffix in ['.js','.wasm','.audio.worklet.js','.audio.position.worklet.js']:
+              (site/(old+suffix)).rename(site/(new+suffix))
+          (site/(old+'.pck')).unlink()
+          index=(site/'index.html').read_text()
+          index=index.replace(old,new).replace(
+              f'"{new}.pck":{meta["base_pck_size"]}',
+              f'"{new}.pck":{meta["pck_size"]}')
+          (site/'index.html').write_text(index)
+          sw=(site/'sw.js').read_text().replace(old,new)
+          (site/'sw.js').write_text(sw)
+          (site/'release.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n')
+          pck=site/(new+'.pck')
+          assert pck.stat().st_size==meta['pck_size']
+          assert hashlib.sha256(pck.read_bytes()).hexdigest()==meta['pck_sha256']
+          assert old not in index and old not in sw
+          PY
       - uses: actions/configure-pages@v5
         with:
           enablement: true

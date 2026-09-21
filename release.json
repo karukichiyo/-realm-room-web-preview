@@ -1,11 +1,12 @@
 {
-  "version": "preview9-jpeg",
+  "version": "preview10-camera-cover-frame",
   "date": "2026-09-21",
-  "runtime": "realm-room-0893b8b5ddcb",
-  "pck_sha256": "0893b8b5ddcbe07a22c5eaaed3adbc7fd34a891407cb9f088a50b231c35616ec",
-  "api_origin": "https://seat-crystal-closely-aberdeen.trycloudflare.com",
-  "archive_url": "https://seat-crystal-closely-aberdeen.trycloudflare.com/realm-room-preview9-0893b8b5ddcb.zip",
-  "archive_sha256": "d521da35d3591e122af112ebefb2b34a3bed0824b645aeea52c818b1165b0347",
-  "release_tag": "preview9-0893b8b5ddcb",
-  "asset_name": "realm-room-web.zip"
+  "runtime": "realm-room-227108743f91",
+  "pck_sha256": "227108743f912657c1ae3298849788166eb21b002494946496b888f65895a7b5",
+  "pck_size": 18427080,
+  "base_runtime": "realm-room-0893b8b5ddcb",
+  "base_pck_size": 18423820,
+  "base_release_tag": "preview9-0893b8b5ddcb",
+  "base_archive_sha256": "d521da35d3591e122af112ebefb2b34a3bed0824b645aeea52c818b1165b0347",
+  "api_origin": "https://seat-crystal-closely-aberdeen.trycloudflare.com"
 }
