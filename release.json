@@ -1,9 +1,9 @@
 {
-  "version": "preview10-camera-cover-frame",
+  "version": "preview11-furniture-projection-environment",
   "date": "2026-09-21",
-  "runtime": "realm-room-227108743f91",
-  "pck_sha256": "227108743f912657c1ae3298849788166eb21b002494946496b888f65895a7b5",
-  "pck_size": 18427080,
+  "runtime": "realm-room-5740866f13f2",
+  "pck_sha256": "5740866f13f213edd32dd2334e9e8ad9efdc9461e38e35e64ded86d7b46ca9b6",
+  "pck_size": 18435600,
   "base_runtime": "realm-room-0893b8b5ddcb",
   "base_pck_size": 18423820,
   "base_release_tag": "preview9-0893b8b5ddcb",

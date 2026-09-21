@@ -37,6 +37,12 @@ with output_pck.open("wb") as output:
         data = replacements.get(path, raw[file_base + offset:file_base + offset + size])
         rebuilt.append((path, output.tell() - file_base, len(data), hashlib.md5(data).digest(), flags))
         output.write(data)
+    known = {entry[0] for entry in entries}
+    for path in sorted(set(replacements) - known):
+        output.write(b"\0" * ((-output.tell()) % 16))
+        data = replacements[path]
+        rebuilt.append((path, output.tell() - file_base, len(data), hashlib.md5(data).digest(), 0))
+        output.write(data)
     output.write(b"\0" * ((-output.tell()) % 16))
     new_directory_offset = output.tell()
     output.write(struct.pack("<I", len(rebuilt)))

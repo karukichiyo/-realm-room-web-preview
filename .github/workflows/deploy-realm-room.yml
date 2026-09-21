@@ -45,7 +45,11 @@ jobs:
           PY
           python3 deploy/patch_pck.py "site/$old_runtime.pck" "site/$runtime.pck" deploy/gdc \
             scripts/room_view.gdc scripts/material_gesture.gdc scripts/room_data.gdc \
-            scripts/console_home.gdc scripts/main.gdc
+            scripts/console_home.gdc scripts/main.gdc scripts/asset_editor.gdc \
+            scripts/asset_preview_backdrop.gdc scripts/room_light_rig.gdc \
+            scripts/window_surface.gdc scripts/character_life.gdc \
+            scripts/environment_profile.gdc scripts/environment_profile.gd.remap \
+            scripts/light_composite.gdshader
           python3 - <<'PY'
           import hashlib,json,pathlib
           meta=json.load(open('release.json'))
