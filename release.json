@@ -1,9 +1,9 @@
 {
   "version": "preview15-desktop",
   "date": "2026-09-22",
-  "runtime": "realm-room-c1fc266ca4af",
-  "pck_sha256": "c1fc266ca4afb306727c87d04cae0cfbd8c6eb1fecd1617a56625cac5381d743",
-  "pck_size": 18490088,
+  "runtime": "realm-room-2a88839f7451",
+  "pck_sha256": "2a88839f74510bc05e88bd1cd04365856a05ac69c7b5f3a33e835449669b4e94",
+  "pck_size": 18490456,
   "base_runtime": "realm-room-0893b8b5ddcb",
   "base_pck_size": 18423820,
   "base_release_tag": "preview9-0893b8b5ddcb",
