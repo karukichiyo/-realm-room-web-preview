@@ -1,7 +1,7 @@
 {
-  "version": "preview21-editor",
+  "version": "preview22-occlusion",
   "date": "2026-09-24",
-  "runtime": "realm-room-preview21-editor",
+  "runtime": "realm-room-preview22-occlusion",
   "pck_sha256": null,
   "pck_size": null,
   "base_runtime": "realm-room-0893b8b5ddcb",
@@ -9,12 +9,12 @@
   "base_release_tag": "preview9-0893b8b5ddcb",
   "base_archive_sha256": "d521da35d3591e122af112ebefb2b34a3bed0824b645aeea52c818b1165b0347",
   "api_origin": "https://seat-crystal-closely-aberdeen.trycloudflare.com",
-  "previous_source_commit": "004cc2b3aa99c10eea1ce8f4c5500bfbc844e5e4",
+  "previous_source_commit": "feac6eaa347a753606a83efacd97daebc7caca47",
   "build_method": "Verified clean Godot 4.6.3 incremental export",
   "notes": [
-    "Preserve camera zoom and center while opening editor panels",
-    "Persistent light editing with large zoom controls and background panning",
-    "Cache image alpha bounds and avoid camera-only lighting invalidation",
-    "Per-instance visual layers and default curtain in front of wall trim"
+    "Unified compound contact regions for sofa collision, footprint and actor/furniture occlusion",
+    "Preserve existing sofa artwork, position and resized copies while migrating contact metadata",
+    "Searchable thumbnail list for selecting any furniture in the light editor",
+    "Switch light targets with current edits saved and camera zoom preserved"
   ]
 }
