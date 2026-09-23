@@ -1,12 +1,14 @@
 {
-  "version": "preview16-grid-export",
-  "date": "2026-09-23",
-  "runtime": "realm-room-0db3764828ff",
-  "pck_sha256": "0db3764828ff544c7b8bd6c9432bde1a1e650b0b1151fa00f99ea06e893698a6",
-  "pck_size": 18491048,
+  "version": "preview17-archive-assets",
+  "date": "2026-09-24",
+  "runtime": "realm-room-preview17-archive-assets",
+  "pck_sha256": null,
+  "pck_size": null,
   "base_runtime": "realm-room-0893b8b5ddcb",
   "base_pck_size": 18423820,
   "base_release_tag": "preview9-0893b8b5ddcb",
   "base_archive_sha256": "d521da35d3591e122af112ebefb2b34a3bed0824b645aeea52c818b1165b0347",
-  "api_origin": "https://seat-crystal-closely-aberdeen.trycloudflare.com"
+  "api_origin": "https://seat-crystal-closely-aberdeen.trycloudflare.com",
+  "source_branch": "codex/preview17-archive-assets",
+  "source_commit": "db3342de4b1fed85e16b6415fed029181ad47912"
 }

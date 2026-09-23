@@ -28,12 +28,20 @@ for _ in range(file_count):
     cursor += 4
     entries.append((path, offset, size, checksum, flags))
 
-# Include new script dependencies as well as the legacy workflow's explicit list.
-replacement_paths = sorted(set(map(str, replacement_paths)) | {
-    "scripts/" + path.name for path in replacements_dir.iterdir()
-    if path.is_file() and path.suffix in {".gdc", ".remap", ".gdshader"}
-})
-replacements = {str(path): (replacements_dir / Path(path).name).read_bytes() for path in replacement_paths}
+# Root-level compiled files keep the legacy `scripts/` target. Nested files use
+# their relative path so imported textures can be added to the archive too.
+sources = {}
+for source in replacements_dir.rglob("*"):
+    if not source.is_file():
+        continue
+    relative = source.relative_to(replacements_dir).as_posix()
+    target = "scripts/" + source.name if source.parent == replacements_dir else relative
+    sources[target] = source
+for requested in map(str, replacement_paths):
+    direct = replacements_dir / requested
+    sources[requested] = direct if direct.is_file() else replacements_dir / Path(requested).name
+replacement_paths = sorted(sources)
+replacements = {path: sources[path].read_bytes() for path in replacement_paths}
 with output_pck.open("wb") as output:
     output.write(raw[:file_base])
     rebuilt = []
