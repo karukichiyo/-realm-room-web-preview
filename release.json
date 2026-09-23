@@ -1,7 +1,7 @@
 {
-  "version": "preview23-atmosphere",
+  "version": "preview24-layers",
   "date": "2026-09-24",
-  "runtime": "realm-room-preview23-atmosphere",
+  "runtime": "realm-room-preview24-layers",
   "pck_sha256": null,
   "pck_size": null,
   "base_runtime": "realm-room-0893b8b5ddcb",
@@ -9,12 +9,12 @@
   "base_release_tag": "preview9-0893b8b5ddcb",
   "base_archive_sha256": "d521da35d3591e122af112ebefb2b34a3bed0824b645aeea52c818b1165b0347",
   "api_origin": "https://seat-crystal-closely-aberdeen.trycloudflare.com",
-  "previous_source_commit": "79f06e47d83443461397acdf8f19a71fe3a903cd",
+  "previous_source_commit": "798585a61aac6d3767b4919587baf78bfb82baf4",
   "build_method": "Verified clean Godot 4.6.3 incremental export",
   "notes": [
-    "Dedicated eight-period scene/glass grading with darker deep night and warm-violet sunset",
-    "Room-wide artificial-light dimmer with presets, preserved per-light ratios and saved brightness",
-    "Alpha-clipped procedural pixel weather for six weather types, with custom-frame priority",
-    "Preserve camera and existing furniture registration; reference and grading document included"
+    "Explicit furniture front/back relations with searchable comparison targets and cycle protection",
+    "Manual layer choices take priority across wall and floor furniture; automatic mode restores spatial order",
+    "Separate restrained glass highlights preserve original artwork independently of dark exterior exposure",
+    "Reuse resolved painter list for window layers"
   ]
 }
