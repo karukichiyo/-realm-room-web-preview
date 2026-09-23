@@ -1,7 +1,7 @@
 {
-  "version": "preview22-occlusion",
+  "version": "preview23-atmosphere",
   "date": "2026-09-24",
-  "runtime": "realm-room-preview22-occlusion",
+  "runtime": "realm-room-preview23-atmosphere",
   "pck_sha256": null,
   "pck_size": null,
   "base_runtime": "realm-room-0893b8b5ddcb",
@@ -9,12 +9,12 @@
   "base_release_tag": "preview9-0893b8b5ddcb",
   "base_archive_sha256": "d521da35d3591e122af112ebefb2b34a3bed0824b645aeea52c818b1165b0347",
   "api_origin": "https://seat-crystal-closely-aberdeen.trycloudflare.com",
-  "previous_source_commit": "feac6eaa347a753606a83efacd97daebc7caca47",
+  "previous_source_commit": "79f06e47d83443461397acdf8f19a71fe3a903cd",
   "build_method": "Verified clean Godot 4.6.3 incremental export",
   "notes": [
-    "Unified compound contact regions for sofa collision, footprint and actor/furniture occlusion",
-    "Preserve existing sofa artwork, position and resized copies while migrating contact metadata",
-    "Searchable thumbnail list for selecting any furniture in the light editor",
-    "Switch light targets with current edits saved and camera zoom preserved"
+    "Dedicated eight-period scene/glass grading with darker deep night and warm-violet sunset",
+    "Room-wide artificial-light dimmer with presets, preserved per-light ratios and saved brightness",
+    "Alpha-clipped procedural pixel weather for six weather types, with custom-frame priority",
+    "Preserve camera and existing furniture registration; reference and grading document included"
   ]
 }
