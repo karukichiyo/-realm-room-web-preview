@@ -1,0 +1,1257 @@
+{
+  "schema_version": 1,
+  "assets": [
+    {
+      "schema_version": 9,
+      "id": "sample-archive-wool-rug",
+      "label": "毛绒地毯",
+      "category": "rug",
+      "mount": "floor",
+      "collections": [
+        "归档素材",
+        "16×18 网格校准"
+      ],
+      "collision": false,
+      "supports": [],
+      "archive_revision": 3,
+      "source_grid": {
+        "canvas": [
+          2000,
+          2000
+        ],
+        "origin": [
+          1054.0,
+          756.0
+        ],
+        "x_axis": [
+          55.5,
+          27.75
+        ],
+        "y_axis": [
+          -55.5,
+          27.75
+        ],
+        "z_axis": [
+          0,
+          -83.25
+        ],
+        "space": [
+          16,
+          18,
+          5.5
+        ]
+      },
+      "sprite": {
+        "projection": "isometric_sprite",
+        "display_width": 548.9009009009009,
+        "display_height": 276.7567567567568,
+        "initial_state": "default",
+        "states": {
+          "default": {
+            "base": "res://assets/archive_pack/wool-rug.png",
+            "source_region": [
+              608,
+              896,
+              952,
+              480
+            ]
+          }
+        },
+        "anchor_x": 0.539390756302521,
+        "anchor_y": 1.0057291666666666
+      },
+      "body_height": 0.1,
+      "ground_cover": true,
+      "footprint": {
+        "width": 9.25225,
+        "depth": 7.9009
+      }
+    },
+    {
+      "schema_version": 9,
+      "id": "sample-archive-sectional-sofa",
+      "label": "组合沙发",
+      "category": "seating",
+      "mount": "floor",
+      "collections": [
+        "归档素材",
+        "16×18 网格校准"
+      ],
+      "collision": true,
+      "supports": [],
+      "archive_revision": 3,
+      "source_grid": {
+        "canvas": [
+          2000,
+          2000
+        ],
+        "origin": [
+          1054.0,
+          756.0
+        ],
+        "x_axis": [
+          55.5,
+          27.75
+        ],
+        "y_axis": [
+          -55.5,
+          27.75
+        ],
+        "z_axis": [
+          0,
+          -83.25
+        ],
+        "space": [
+          16,
+          18,
+          5.5
+        ]
+      },
+      "sprite": {
+        "projection": "isometric_sprite",
+        "display_width": 366.7027027027027,
+        "display_height": 223.7117117117117,
+        "initial_state": "default",
+        "states": {
+          "default": {
+            "base": "res://assets/archive_pack/sectional-sofa.png",
+            "source_region": [
+              848,
+              880,
+              636,
+              388
+            ]
+          }
+        },
+        "anchor_x": 0.6124213836477987,
+        "anchor_y": 1.1668814432989691
+      },
+      "body_height": 1.6186186186186187,
+      "footprint": {
+        "width": 7.01802,
+        "depth": 4.44144
+      },
+      "actions": [
+        {
+          "type": "sit",
+          "label": "坐下",
+          "pose": "sit",
+          "facing": "right",
+          "approach": {
+            "x": 3.509009009009009,
+            "y": 4.741441441441442,
+            "z": 0
+          },
+          "visual": {
+            "offset_x": 0,
+            "offset_y": -40
+          }
+        }
+      ],
+      "collision_rects": [
+        [
+          0,
+          0,
+          7.01802,
+          1.9
+        ],
+        [
+          1.75,
+          1.9,
+          3.2,
+          1.35
+        ]
+      ]
+    },
+    {
+      "schema_version": 9,
+      "id": "sample-archive-round-table",
+      "label": "深色圆桌",
+      "category": "table",
+      "mount": "floor",
+      "collections": [
+        "归档素材",
+        "16×18 网格校准"
+      ],
+      "collision": true,
+      "supports": [],
+      "archive_revision": 3,
+      "source_grid": {
+        "canvas": [
+          2000,
+          2000
+        ],
+        "origin": [
+          1054.0,
+          756.0
+        ],
+        "x_axis": [
+          55.5,
+          27.75
+        ],
+        "y_axis": [
+          -55.5,
+          27.75
+        ],
+        "z_axis": [
+          0,
+          -83.25
+        ],
+        "space": [
+          16,
+          18,
+          5.5
+        ]
+      },
+      "sprite": {
+        "projection": "isometric_sprite",
+        "display_width": 55.351351351351354,
+        "display_height": 36.9009009009009,
+        "initial_state": "default",
+        "states": {
+          "default": {
+            "base": "res://assets/archive_pack/dark-round-table.png",
+            "source_region": [
+              1204,
+              1188,
+              96,
+              64
+            ]
+          }
+        },
+        "anchor_x": 0.4322916666666667,
+        "anchor_y": 1.23046875
+      },
+      "body_height": 0.36936936936936937,
+      "footprint": {
+        "width": 0.74775,
+        "depth": 0.98198
+      }
+    },
+    {
+      "schema_version": 9,
+      "id": "sample-archive-wood-cabinet",
+      "label": "双状态木柜",
+      "category": "storage",
+      "mount": "floor",
+      "collections": [
+        "归档素材",
+        "16×18 网格校准"
+      ],
+      "collision": true,
+      "supports": [],
+      "archive_revision": 3,
+      "source_grid": {
+        "canvas": [
+          2000,
+          2000
+        ],
+        "origin": [
+          1054.0,
+          756.0
+        ],
+        "x_axis": [
+          55.5,
+          27.75
+        ],
+        "y_axis": [
+          -55.5,
+          27.75
+        ],
+        "z_axis": [
+          0,
+          -83.25
+        ],
+        "space": [
+          16,
+          18,
+          5.5
+        ]
+      },
+      "sprite": {
+        "projection": "isometric_sprite",
+        "display_width": 71.49549549549549,
+        "display_height": 272.14414414414415,
+        "initial_state": "closed",
+        "states": {
+          "closed": {
+            "base": "res://assets/archive_pack/wood-cabinet-closed.png",
+            "source_region": [
+              1196,
+              436,
+              124,
+              472
+            ]
+          },
+          "open": {
+            "base": "res://assets/archive_pack/wood-cabinet-open.png",
+            "source_region": [
+              1196,
+              436,
+              124,
+              472
+            ]
+          }
+        },
+        "anchor_x": 0.8508064516129032,
+        "anchor_y": 1.0015889830508475
+      },
+      "body_height": 4.933933933933934,
+      "footprint": {
+        "width": 1.9009,
+        "depth": 0.33333
+      },
+      "actions": [
+        {
+          "type": "open",
+          "label": "打开／关闭",
+          "pose": "stand",
+          "facing": "left",
+          "state": "open",
+          "approach": {
+            "x": 0.9504504504504504,
+            "y": 0.7333333333333334,
+            "z": 0
+          }
+        }
+      ]
+    },
+    {
+      "schema_version": 9,
+      "id": "sample-archive-large-plant",
+      "label": "大型盆栽",
+      "category": "decor",
+      "mount": "floor",
+      "collections": [
+        "归档素材",
+        "16×18 网格校准"
+      ],
+      "collision": true,
+      "supports": [],
+      "archive_revision": 3,
+      "source_grid": {
+        "canvas": [
+          2000,
+          2000
+        ],
+        "origin": [
+          1054.0,
+          756.0
+        ],
+        "x_axis": [
+          55.5,
+          27.75
+        ],
+        "y_axis": [
+          -55.5,
+          27.75
+        ],
+        "z_axis": [
+          0,
+          -83.25
+        ],
+        "space": [
+          16,
+          18,
+          5.5
+        ]
+      },
+      "sprite": {
+        "projection": "isometric_sprite",
+        "display_width": 327.4954954954955,
+        "display_height": 355.1711711711712,
+        "initial_state": "default",
+        "states": {
+          "default": {
+            "base": "res://assets/archive_pack/large-plant.png",
+            "source_region": [
+              948,
+              400,
+              568,
+              616
+            ]
+          }
+        },
+        "anchor_x": 0.40757042253521125,
+        "anchor_y": 1.0028409090909092
+      },
+      "body_height": 6.387387387387387,
+      "footprint": {
+        "width": 1.64865,
+        "depth": 1.45045
+      }
+    },
+    {
+      "schema_version": 9,
+      "id": "sample-archive-gray-column",
+      "label": "装饰灰色柱",
+      "category": "decor",
+      "mount": "floor",
+      "collections": [
+        "归档素材",
+        "16×18 网格校准"
+      ],
+      "collision": true,
+      "supports": [],
+      "archive_revision": 3,
+      "source_grid": {
+        "canvas": [
+          2000,
+          2000
+        ],
+        "origin": [
+          1054.0,
+          756.0
+        ],
+        "x_axis": [
+          55.5,
+          27.75
+        ],
+        "y_axis": [
+          -55.5,
+          27.75
+        ],
+        "z_axis": [
+          0,
+          -83.25
+        ],
+        "space": [
+          16,
+          18,
+          5.5
+        ]
+      },
+      "sprite": {
+        "projection": "isometric_sprite",
+        "display_width": 161.44144144144144,
+        "display_height": 341.3333333333333,
+        "initial_state": "default",
+        "states": {
+          "default": {
+            "base": "res://assets/archive_pack/gray-column.png",
+            "source_region": [
+              896,
+              308,
+              280,
+              592
+            ]
+          }
+        },
+        "anchor_x": 0.3767857142857143,
+        "anchor_y": 1.0080236486486487
+      },
+      "body_height": 5.486486486486487,
+      "footprint": {
+        "width": 1.9009,
+        "depth": 3.14414
+      }
+    },
+    {
+      "schema_version": 9,
+      "id": "sample-archive-narrow-column",
+      "label": "装饰窄柱",
+      "category": "decor",
+      "mount": "floor",
+      "collections": [
+        "归档素材",
+        "16×18 网格校准"
+      ],
+      "collision": true,
+      "supports": [],
+      "archive_revision": 3,
+      "source_grid": {
+        "canvas": [
+          2000,
+          2000
+        ],
+        "origin": [
+          1054.0,
+          756.0
+        ],
+        "x_axis": [
+          55.5,
+          27.75
+        ],
+        "y_axis": [
+          -55.5,
+          27.75
+        ],
+        "z_axis": [
+          0,
+          -83.25
+        ],
+        "space": [
+          16,
+          18,
+          5.5
+        ]
+      },
+      "sprite": {
+        "projection": "isometric_sprite",
+        "display_width": 64.57657657657657,
+        "display_height": 272.14414414414415,
+        "initial_state": "default",
+        "states": {
+          "default": {
+            "base": "res://assets/archive_pack/narrow-column.png",
+            "source_region": [
+              1144,
+              392,
+              112,
+              472
+            ]
+          }
+        },
+        "anchor_x": 0.20982142857142858,
+        "anchor_y": 1.003707627118644
+      },
+      "body_height": 5.378378378378378,
+      "footprint": {
+        "width": 0.42342,
+        "depth": 0.51351
+      }
+    },
+    {
+      "schema_version": 9,
+      "id": "sample-archive-triple-light",
+      "label": "三连顶灯",
+      "category": "light",
+      "mount": "ceiling",
+      "collections": [
+        "归档素材",
+        "16×18 网格校准"
+      ],
+      "collision": false,
+      "supports": [],
+      "archive_revision": 3,
+      "source_grid": {
+        "canvas": [
+          2000,
+          2000
+        ],
+        "origin": [
+          1054.0,
+          756.0
+        ],
+        "x_axis": [
+          55.5,
+          27.75
+        ],
+        "y_axis": [
+          -55.5,
+          27.75
+        ],
+        "z_axis": [
+          0,
+          -83.25
+        ],
+        "space": [
+          16,
+          18,
+          5.5
+        ]
+      },
+      "sprite": {
+        "projection": "isometric_sprite",
+        "display_width": 117.62162162162161,
+        "display_height": 87.63963963963964,
+        "initial_state": "default",
+        "states": {
+          "default": {
+            "base": "res://assets/archive_pack/triple-ceiling-light.png",
+            "source_region": [
+              1216,
+              616,
+              204,
+              152
+            ]
+          }
+        },
+        "anchor_world": [
+          0,
+          0,
+          0
+        ],
+        "anchor_x": 0.5,
+        "anchor_y": 0.0
+      },
+      "hanging_height": 1.8258258258258258,
+      "light": {
+        "color": "ffd69b",
+        "radius": 200.0,
+        "energy": 0.65,
+        "offset_y": 74.49369369369369
+      },
+      "footprint": {
+        "width": 0.25,
+        "depth": 0.25
+      }
+    },
+    {
+      "schema_version": 9,
+      "id": "sample-archive-hanging-light",
+      "label": "悬挂吊灯",
+      "category": "light",
+      "mount": "ceiling",
+      "collections": [
+        "归档素材",
+        "16×18 网格校准"
+      ],
+      "collision": false,
+      "supports": [],
+      "archive_revision": 3,
+      "source_grid": {
+        "canvas": [
+          2000,
+          2000
+        ],
+        "origin": [
+          1054.0,
+          756.0
+        ],
+        "x_axis": [
+          55.5,
+          27.75
+        ],
+        "y_axis": [
+          -55.5,
+          27.75
+        ],
+        "z_axis": [
+          0,
+          -83.25
+        ],
+        "space": [
+          16,
+          18,
+          5.5
+        ]
+      },
+      "sprite": {
+        "projection": "isometric_sprite",
+        "display_width": 20.756756756756758,
+        "display_height": 170.66666666666666,
+        "initial_state": "default",
+        "states": {
+          "default": {
+            "base": "res://assets/archive_pack/hanging-light.png",
+            "source_region": [
+              1168,
+              428,
+              36,
+              296
+            ]
+          }
+        },
+        "anchor_world": [
+          0,
+          0,
+          0
+        ],
+        "anchor_x": 0.5,
+        "anchor_y": 0.0
+      },
+      "hanging_height": 3.5555555555555554,
+      "light": {
+        "color": "ffd69b",
+        "radius": 200.0,
+        "energy": 0.65,
+        "offset_y": 145.06666666666666
+      },
+      "footprint": {
+        "width": 0.25,
+        "depth": 0.25
+      }
+    },
+    {
+      "schema_version": 9,
+      "id": "sample-archive-raised-left-upper",
+      "label": "立体墙面 · 左上",
+      "category": "decor",
+      "mount": "wall",
+      "collections": [
+        "归档素材",
+        "16×18 网格校准"
+      ],
+      "collision": false,
+      "supports": [],
+      "archive_revision": 3,
+      "source_grid": {
+        "canvas": [
+          2000,
+          2000
+        ],
+        "origin": [
+          1054.0,
+          756.0
+        ],
+        "x_axis": [
+          55.5,
+          27.75
+        ],
+        "y_axis": [
+          -55.5,
+          27.75
+        ],
+        "z_axis": [
+          0,
+          -83.25
+        ],
+        "space": [
+          16,
+          18,
+          5.5
+        ]
+      },
+      "sprite": {
+        "projection": "isometric_sprite",
+        "display_width": 590.4144144144144,
+        "display_height": 311.35135135135135,
+        "initial_state": "default",
+        "states": {
+          "default": {
+            "base": "res://assets/archive_pack/raised-wall-left-upper.png",
+            "source_region": [
+              56,
+              300,
+              1024,
+              540
+            ]
+          }
+        },
+        "anchor_x": 0.48681640625,
+        "anchor_y": 0.538425925925926
+      },
+      "wall_side": "left",
+      "mirror_on_left": false,
+      "visual_depth_bias": 0.1,
+      "footprint": {
+        "width": 18.0,
+        "depth": 0.33634
+      }
+    },
+    {
+      "schema_version": 9,
+      "id": "sample-archive-raised-left-lower",
+      "label": "立体墙面 · 左下",
+      "category": "decor",
+      "mount": "wall",
+      "collections": [
+        "归档素材",
+        "16×18 网格校准"
+      ],
+      "collision": false,
+      "supports": [],
+      "archive_revision": 3,
+      "source_grid": {
+        "canvas": [
+          2000,
+          2000
+        ],
+        "origin": [
+          1054.0,
+          756.0
+        ],
+        "x_axis": [
+          55.5,
+          27.75
+        ],
+        "y_axis": [
+          -55.5,
+          27.75
+        ],
+        "z_axis": [
+          0,
+          -83.25
+        ],
+        "space": [
+          16,
+          18,
+          5.5
+        ]
+      },
+      "sprite": {
+        "projection": "isometric_sprite",
+        "display_width": 608.8648648648649,
+        "display_height": 304.43243243243245,
+        "initial_state": "default",
+        "states": {
+          "default": {
+            "base": "res://assets/archive_pack/raised-wall-left-lower.png",
+            "source_region": [
+              52,
+              736,
+              1056,
+              528
+            ]
+          }
+        },
+        "anchor_x": 0.4758522727272727,
+        "anchor_y": 0.5108901515151515
+      },
+      "wall_side": "left",
+      "mirror_on_left": false,
+      "visual_depth_bias": 0.1,
+      "footprint": {
+        "width": 18.0,
+        "depth": 0.05
+      }
+    },
+    {
+      "schema_version": 9,
+      "id": "sample-archive-raised-right",
+      "label": "立体墙面 · 右墙",
+      "category": "decor",
+      "mount": "wall",
+      "collections": [
+        "归档素材",
+        "16×18 网格校准"
+      ],
+      "collision": false,
+      "supports": [],
+      "archive_revision": 3,
+      "source_grid": {
+        "canvas": [
+          2000,
+          2000
+        ],
+        "origin": [
+          1054.0,
+          756.0
+        ],
+        "x_axis": [
+          55.5,
+          27.75
+        ],
+        "y_axis": [
+          -55.5,
+          27.75
+        ],
+        "z_axis": [
+          0,
+          -83.25
+        ],
+        "space": [
+          16,
+          18,
+          5.5
+        ]
+      },
+      "sprite": {
+        "projection": "isometric_sprite",
+        "display_width": 456.64864864864865,
+        "display_height": 484.3243243243243,
+        "initial_state": "default",
+        "states": {
+          "default": {
+            "base": "res://assets/archive_pack/raised-wall-right.png",
+            "source_region": [
+              1152,
+              360,
+              792,
+              840
+            ]
+          }
+        },
+        "anchor_x": 0.49873737373737376,
+        "anchor_y": 0.7636904761904761
+      },
+      "wall_side": "right",
+      "mirror_on_left": false,
+      "visual_depth_bias": 0.1,
+      "footprint": {
+        "width": 14.23423,
+        "depth": 5.33333
+      }
+    },
+    {
+      "schema_version": 9,
+      "id": "sample-archive-curtain",
+      "label": "窗帘",
+      "category": "decor",
+      "mount": "wall",
+      "collections": [
+        "归档素材",
+        "16×18 网格校准"
+      ],
+      "collision": false,
+      "supports": [],
+      "archive_revision": 3,
+      "source_grid": {
+        "canvas": [
+          2000,
+          2000
+        ],
+        "origin": [
+          1054.0,
+          756.0
+        ],
+        "x_axis": [
+          55.5,
+          27.75
+        ],
+        "y_axis": [
+          -55.5,
+          27.75
+        ],
+        "z_axis": [
+          0,
+          -83.25
+        ],
+        "space": [
+          16,
+          18,
+          5.5
+        ]
+      },
+      "sprite": {
+        "projection": "isometric_sprite",
+        "display_width": 55.351351351351354,
+        "display_height": 267.5315315315315,
+        "initial_state": "default",
+        "states": {
+          "default": {
+            "base": "res://assets/archive_pack/curtain.png",
+            "source_region": [
+              824,
+              424,
+              96,
+              464
+            ]
+          }
+        },
+        "anchor_x": 0.5,
+        "anchor_y": 0.9116379310344828
+      },
+      "wall_side": "left",
+      "mirror_on_left": false,
+      "visual_depth_bias": 0.1,
+      "footprint": {
+        "width": 1.72973,
+        "depth": 4.997
+      }
+    },
+    {
+      "schema_version": 9,
+      "id": "sample-archive-window-left",
+      "label": "左墙分层窗户",
+      "category": "window",
+      "mount": "wall",
+      "collections": [
+        "归档素材",
+        "16×18 网格校准"
+      ],
+      "collision": false,
+      "supports": [],
+      "archive_revision": 3,
+      "source_grid": {
+        "canvas": [
+          2000,
+          2000
+        ],
+        "origin": [
+          1054.0,
+          756.0
+        ],
+        "x_axis": [
+          55.5,
+          27.75
+        ],
+        "y_axis": [
+          -55.5,
+          27.75
+        ],
+        "z_axis": [
+          0,
+          -83.25
+        ],
+        "space": [
+          16,
+          18,
+          5.5
+        ]
+      },
+      "sprite": {
+        "projection": "isometric_sprite",
+        "display_width": 352.86486486486484,
+        "display_height": 412.8288288288288,
+        "initial_state": "default",
+        "states": {
+          "default": {
+            "base": "res://assets/archive_pack/window-frame-left.png",
+            "source_region": [
+              280,
+              404,
+              612,
+              716
+            ],
+            "scene": "res://assets/archive_pack/window-scene-left.png",
+            "glass": "res://assets/archive_pack/window-glass-left.png",
+            "canvas_width": 2000,
+            "canvas_height": 2000,
+            "weather_effects": {
+              "clear": [],
+              "cloudy": [],
+              "rain": [],
+              "snow": [],
+              "leaves": [],
+              "wind": []
+            }
+          }
+        },
+        "anchor_x": 0.5065359477124183,
+        "anchor_y": 0.7891061452513967
+      },
+      "wall_side": "left",
+      "mirror_on_left": false,
+      "visual_depth_bias": 0.05,
+      "footprint": {
+        "width": 10.88288,
+        "depth": 4.97297
+      }
+    },
+    {
+      "schema_version": 9,
+      "id": "sample-archive-window-right",
+      "label": "右墙分层窗户",
+      "category": "window",
+      "mount": "wall",
+      "collections": [
+        "归档素材",
+        "16×18 网格校准"
+      ],
+      "collision": false,
+      "supports": [],
+      "archive_revision": 3,
+      "source_grid": {
+        "canvas": [
+          2000,
+          2000
+        ],
+        "origin": [
+          1054.0,
+          756.0
+        ],
+        "x_axis": [
+          55.5,
+          27.75
+        ],
+        "y_axis": [
+          -55.5,
+          27.75
+        ],
+        "z_axis": [
+          0,
+          -83.25
+        ],
+        "space": [
+          16,
+          18,
+          5.5
+        ]
+      },
+      "sprite": {
+        "projection": "isometric_sprite",
+        "display_width": 352.86486486486484,
+        "display_height": 412.8288288288288,
+        "initial_state": "default",
+        "states": {
+          "default": {
+            "base": "res://assets/archive_pack/window-frame-right.png",
+            "source_region": [
+              1248,
+              420,
+              612,
+              716
+            ],
+            "scene": "res://assets/archive_pack/window-scene-right.png",
+            "glass": "res://assets/archive_pack/window-glass-right.png",
+            "canvas_width": 2000,
+            "canvas_height": 2000,
+            "weather_effects": {
+              "clear": [],
+              "cloudy": [],
+              "rain": [],
+              "snow": [],
+              "leaves": [],
+              "wind": []
+            }
+          }
+        },
+        "anchor_x": 0.49673202614379086,
+        "anchor_y": 0.7877094972067039
+      },
+      "wall_side": "right",
+      "mirror_on_left": false,
+      "visual_depth_bias": 0.05,
+      "footprint": {
+        "width": 10.95495,
+        "depth": 4.94895
+      }
+    }
+  ],
+  "instances": [
+    {
+      "id": "archive-showcase-wool-rug",
+      "asset_id": "sample-archive-wool-rug",
+      "x": 2.576576576576578,
+      "y": 2.711711711711711,
+      "z": 0,
+      "state": "default",
+      "action_index": 0,
+      "description": "按原始 16×18 画布校准"
+    },
+    {
+      "id": "archive-showcase-sectional-sofa",
+      "asset_id": "sample-archive-sectional-sofa",
+      "x": 5.027027027027027,
+      "y": 4.297297297297296,
+      "z": 0,
+      "state": "default",
+      "action_index": 0,
+      "description": "按原始 16×18 画布校准"
+    },
+    {
+      "id": "archive-showcase-round-table",
+      "asset_id": "sample-archive-round-table",
+      "x": 10.18018018018018,
+      "y": 6.495495495495496,
+      "z": 0,
+      "state": "default",
+      "action_index": 0,
+      "description": "按原始 16×18 画布校准"
+    },
+    {
+      "id": "archive-showcase-wood-cabinet",
+      "asset_id": "sample-archive-wood-cabinet",
+      "x": 3.0810810810810816,
+      "y": 0.1891891891891892,
+      "z": 0,
+      "state": "closed",
+      "action_index": 0,
+      "description": "按原始 16×18 画布校准"
+    },
+    {
+      "id": "archive-showcase-large-plant",
+      "asset_id": "sample-archive-large-plant",
+      "x": 4.198198198198197,
+      "y": 2.135135135135135,
+      "z": 0,
+      "state": "default",
+      "action_index": 0,
+      "description": "按原始 16×18 画布校准"
+    },
+    {
+      "id": "archive-showcase-gray-column",
+      "asset_id": "sample-archive-gray-column",
+      "x": 0.3063063063063065,
+      "y": 0.009009009009008917,
+      "z": 0,
+      "state": "default",
+      "action_index": 0,
+      "description": "按原始 16×18 画布校准"
+    },
+    {
+      "id": "archive-showcase-narrow-column",
+      "asset_id": "sample-archive-narrow-column",
+      "x": 2.5765765765765765,
+      "y": 0.4414414414414415,
+      "z": 0,
+      "state": "default",
+      "action_index": 0,
+      "description": "按原始 16×18 画布校准"
+    },
+    {
+      "id": "archive-showcase-triple-light",
+      "asset_id": "sample-archive-triple-light",
+      "x": 8.105855855855856,
+      "y": 3.349099099099099,
+      "z": 5.5,
+      "state": "default",
+      "action_index": 0,
+      "description": "按原始 16×18 画布校准"
+    },
+    {
+      "id": "archive-showcase-hanging-light",
+      "asset_id": "sample-archive-hanging-light",
+      "x": 3.5292792792792795,
+      "y": 1.1509009009009008,
+      "z": 5.5,
+      "state": "default",
+      "action_index": 0,
+      "description": "按原始 16×18 画布校准"
+    },
+    {
+      "id": "archive-showcase-raised-left-upper",
+      "asset_id": "sample-archive-raised-left-upper",
+      "x": 0.0,
+      "y": 0.0,
+      "z": 4.984984984984985,
+      "state": "default",
+      "action_index": 0,
+      "description": "按原始 16×18 画布校准",
+      "wall": "left",
+      "u": 0.0
+    },
+    {
+      "id": "archive-showcase-raised-left-lower",
+      "asset_id": "sample-archive-raised-left-lower",
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "state": "default",
+      "action_index": 0,
+      "description": "按原始 16×18 画布校准",
+      "wall": "left",
+      "u": 0.0
+    },
+    {
+      "id": "archive-showcase-raised-right",
+      "asset_id": "sample-archive-raised-right",
+      "x": 1.7657657657657657,
+      "y": 0.0,
+      "z": 0.012012012012012012,
+      "state": "default",
+      "action_index": 0,
+      "description": "按原始 16×18 画布校准",
+      "wall": "right",
+      "u": 1.7657657657657657
+    },
+    {
+      "id": "archive-showcase-curtain",
+      "asset_id": "sample-archive-curtain",
+      "x": 0.0,
+      "y": 2.4144144144144146,
+      "z": 0.0,
+      "state": "default",
+      "action_index": 0,
+      "description": "按原始 16×18 画布校准",
+      "wall": "left",
+      "u": 2.4144144144144146
+    },
+    {
+      "id": "archive-showcase-window-left",
+      "asset_id": "sample-archive-window-left",
+      "x": 0.0,
+      "y": 2.918918918918919,
+      "z": 0.22822822822822822,
+      "state": "default",
+      "action_index": 0,
+      "description": "按原始 16×18 画布校准",
+      "wall": "left",
+      "u": 2.918918918918919
+    },
+    {
+      "id": "archive-showcase-window-right",
+      "asset_id": "sample-archive-window-right",
+      "x": 3.4954954954954953,
+      "y": 0.0,
+      "z": 0.25225225225225223,
+      "state": "default",
+      "action_index": 0,
+      "description": "按原始 16×18 画布校准",
+      "wall": "right",
+      "u": 3.4954954954954953
+    }
+  ]
+}

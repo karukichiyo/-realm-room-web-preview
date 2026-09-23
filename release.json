@@ -1,7 +1,7 @@
 {
-  "version": "preview19-materials",
+  "version": "preview20-calibrated",
   "date": "2026-09-24",
-  "runtime": "realm-room-preview19-materials",
+  "runtime": "realm-room-preview20-calibrated",
   "pck_sha256": null,
   "pck_size": null,
   "base_runtime": "realm-room-0893b8b5ddcb",
@@ -9,12 +9,12 @@
   "base_release_tag": "preview9-0893b8b5ddcb",
   "base_archive_sha256": "d521da35d3591e122af112ebefb2b34a3bed0824b645aeea52c818b1165b0347",
   "api_origin": "https://seat-crystal-closely-aberdeen.trycloudflare.com",
-  "previous_source_commit": "db3342de4b1fed85e16b6415fed029181ad47912",
+  "previous_source_commit": "2fa2e4e0655b75843cd50f9e4c3ec1a0719bb49c",
   "build_method": "Verified clean Godot 4.6.3 incremental export",
   "notes": [
-    "Bundled catalogue merged with existing workspaces",
-    "Wall and floor surfaces separated from furniture",
-    "Multiple furniture lights",
-    "Local storage management and content hashes"
+    "16x18 shared-canvas calibration and authored composition",
+    "Correct surface classification, editable UV transforms and calibration sidecars",
+    "Physical furniture footprints, compound collision and suspended occlusion",
+    "Window ambient time tint and import incident regression tests"
   ]
 }

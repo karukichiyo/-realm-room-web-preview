@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "archive-20260924",
-  "version": 2,
+  "version": 3,
   "source": "bundled",
   "categories": [
     "furniture",
@@ -14,189 +14,171 @@
       "label": "灰色石地板",
       "target": "floor",
       "mode": "perspective",
-      "path": "res://assets/archive_pack/surfaces/gray-stone-floor.png"
+      "path": "res://assets/archive_pack/gray-stone-floor.png"
     },
     {
       "id": "white-wall-left",
       "label": "白色墙纸 · 左墙",
       "target": "left_wall",
       "mode": "perspective",
-      "path": "res://assets/archive_pack/surfaces/white-wall-left.png"
+      "path": "res://assets/archive_pack/white-wall-left.png"
     },
     {
       "id": "white-wall-right",
       "label": "白色墙纸 · 右墙",
       "target": "right_wall",
       "mode": "perspective",
-      "path": "res://assets/archive_pack/surfaces/white-wall-right.png"
-    },
-    {
-      "id": "raised-wall-left-upper",
-      "label": "立体墙面 · 左上",
-      "target": "left_wall",
-      "mode": "perspective",
-      "path": "res://assets/archive_pack/surfaces/raised-wall-left-upper.png"
-    },
-    {
-      "id": "raised-wall-left-lower",
-      "label": "立体墙面 · 左下",
-      "target": "left_wall",
-      "mode": "perspective",
-      "path": "res://assets/archive_pack/surfaces/raised-wall-left-lower.png"
-    },
-    {
-      "id": "raised-wall-right",
-      "label": "立体墙面 · 右墙",
-      "target": "right_wall",
-      "mode": "perspective",
-      "path": "res://assets/archive_pack/surfaces/raised-wall-right.png"
+      "path": "res://assets/archive_pack/white-wall-right.png"
     }
   ],
   "files": [
     {
+      "path": "res://assets/archive_pack/calibrated-layout.json",
+      "bytes": 29443,
+      "sha256": "d67419ec698e06512ed6ccd24ec58066fb4b5106b4eeb41ee178b32dc124146d"
+    },
+    {
       "path": "res://assets/archive_pack/curtain.png",
-      "sha256": "d040de7f88dd556e665eac5bc5f8c4c2ba10b7d8e74e9582e94c2f8d373bd7a2",
-      "bytes": 73010
+      "bytes": 73010,
+      "sha256": "d040de7f88dd556e665eac5bc5f8c4c2ba10b7d8e74e9582e94c2f8d373bd7a2"
     },
     {
       "path": "res://assets/archive_pack/dark-round-table.png",
-      "sha256": "878e5771e3360d5f333a7ad4b5317216fe167ccb0df778a9cd439804c261a655",
-      "bytes": 70645
+      "bytes": 70645,
+      "sha256": "878e5771e3360d5f333a7ad4b5317216fe167ccb0df778a9cd439804c261a655"
     },
     {
       "path": "res://assets/archive_pack/gray-column.png",
-      "sha256": "fdfc44a14e316702cf4c0e431b9a7945f52439c1d82d9cc07459ba8d93791eaf",
-      "bytes": 78871
+      "bytes": 78871,
+      "sha256": "fdfc44a14e316702cf4c0e431b9a7945f52439c1d82d9cc07459ba8d93791eaf"
     },
     {
       "path": "res://assets/archive_pack/gray-stone-floor.png",
-      "sha256": "f6e9936fc62ff8766f3f0775727b11a4627351dcaa41e43f150eba02ac7dac55",
-      "bytes": 99857
+      "bytes": 99857,
+      "sha256": "f6e9936fc62ff8766f3f0775727b11a4627351dcaa41e43f150eba02ac7dac55"
     },
     {
       "path": "res://assets/archive_pack/hanging-light.png",
-      "sha256": "1b5ecc5bf9a8eaff8210295c9cf11247b6cfbcdad80dfba027942facf9b2e184",
-      "bytes": 71615
+      "bytes": 71615,
+      "sha256": "1b5ecc5bf9a8eaff8210295c9cf11247b6cfbcdad80dfba027942facf9b2e184"
     },
     {
       "path": "res://assets/archive_pack/large-plant.png",
-      "sha256": "281c9c43b17f7fc51836c871645aef054f76c2d11c87a5d0c986af95d38118da",
-      "bytes": 80905
+      "bytes": 80905,
+      "sha256": "281c9c43b17f7fc51836c871645aef054f76c2d11c87a5d0c986af95d38118da"
     },
     {
       "path": "res://assets/archive_pack/narrow-column.png",
-      "sha256": "0a643bddfd099f6258c9db93b0fa27de8db778b02312adc3aed8513f621a73f8",
-      "bytes": 72076
+      "bytes": 72076,
+      "sha256": "0a643bddfd099f6258c9db93b0fa27de8db778b02312adc3aed8513f621a73f8"
     },
     {
       "path": "res://assets/archive_pack/raised-wall-left-lower.png",
-      "sha256": "0073ccc57f282dfc4f89144069319fc5cbd7fc1d6899eaefdb1f9782dcc71701",
-      "bytes": 73691
+      "bytes": 73691,
+      "sha256": "0073ccc57f282dfc4f89144069319fc5cbd7fc1d6899eaefdb1f9782dcc71701"
     },
     {
       "path": "res://assets/archive_pack/raised-wall-left-upper.png",
-      "sha256": "db6de624173b4f969fc253889bfa5601762194319feab5b5e3f639ccf53c2a77",
-      "bytes": 73681
+      "bytes": 73681,
+      "sha256": "db6de624173b4f969fc253889bfa5601762194319feab5b5e3f639ccf53c2a77"
     },
     {
       "path": "res://assets/archive_pack/raised-wall-right.png",
-      "sha256": "98742baa6a769b78d3520f6006299c7fce0f497553372928986a962109b8c596",
-      "bytes": 76131
+      "bytes": 76131,
+      "sha256": "98742baa6a769b78d3520f6006299c7fce0f497553372928986a962109b8c596"
     },
     {
       "path": "res://assets/archive_pack/sectional-sofa.png",
-      "sha256": "c3299f4003086f75683da99697867ab84948f97b4c1b6651a1bd7eb9bd584d2d",
-      "bytes": 81100
-    },
-    {
-      "path": "res://assets/archive_pack/surfaces/gray-stone-floor.png",
-      "sha256": "8dadca83d16a005414547d8bfc7b5dde907f0e3344563a0862707a8dcd9f0bed",
-      "bytes": 29600
-    },
-    {
-      "path": "res://assets/archive_pack/surfaces/raised-wall-left-lower.png",
-      "sha256": "36cd9a7b4f52cd6f92b416cbb74bbcd592d1d470d49ed672e6efbbc15fde1afc",
-      "bytes": 4620
-    },
-    {
-      "path": "res://assets/archive_pack/surfaces/raised-wall-left-upper.png",
-      "sha256": "c5cac6aefdc59e1110ce6a37b3760033faf341d304117131c974b66bd330a587",
-      "bytes": 4578
-    },
-    {
-      "path": "res://assets/archive_pack/surfaces/raised-wall-right.png",
-      "sha256": "ac569632e1d9614da95b142983c239aff2aa3621da4d7fc77a542c0287ccb12a",
-      "bytes": 6207
-    },
-    {
-      "path": "res://assets/archive_pack/surfaces/white-wall-left.png",
-      "sha256": "206d800a046899b742fc332b45f21b4ee1b4a50bc5a622d82b5178cd039103a3",
-      "bytes": 7054
-    },
-    {
-      "path": "res://assets/archive_pack/surfaces/white-wall-right.png",
-      "sha256": "7ae1d38af5346264c1594edbd1e034746f3079533738f32f1da23473ec7dcaa8",
-      "bytes": 6222
+      "bytes": 81100,
+      "sha256": "c3299f4003086f75683da99697867ab84948f97b4c1b6651a1bd7eb9bd584d2d"
     },
     {
       "path": "res://assets/archive_pack/triple-ceiling-light.png",
-      "sha256": "baa50e72e6ecd6b9f34093f9f6fb4927614fb883bc8ffa4268d0b98d98f95f0d",
-      "bytes": 71546
+      "bytes": 71546,
+      "sha256": "baa50e72e6ecd6b9f34093f9f6fb4927614fb883bc8ffa4268d0b98d98f95f0d"
     },
     {
       "path": "res://assets/archive_pack/white-wall-left.png",
-      "sha256": "0ea236ac7cb74cfb1c2d392781ac341721a0dfe72ccdc023b1792b6f0af86f37",
-      "bytes": 75698
+      "bytes": 75698,
+      "sha256": "0ea236ac7cb74cfb1c2d392781ac341721a0dfe72ccdc023b1792b6f0af86f37"
     },
     {
       "path": "res://assets/archive_pack/white-wall-right.png",
-      "sha256": "10da18901754cd69453e49e72a0f21c9a943c6ab8cb4b6d78a38a52aff792e5b",
-      "bytes": 75304
+      "bytes": 75304,
+      "sha256": "10da18901754cd69453e49e72a0f21c9a943c6ab8cb4b6d78a38a52aff792e5b"
     },
     {
       "path": "res://assets/archive_pack/window-frame-left.png",
-      "sha256": "5e420685f25f18755eb43288a50ff8970fbf523047090afbc9b6ae5549907b47",
-      "bytes": 74439
+      "bytes": 74439,
+      "sha256": "5e420685f25f18755eb43288a50ff8970fbf523047090afbc9b6ae5549907b47"
     },
     {
       "path": "res://assets/archive_pack/window-frame-right.png",
-      "sha256": "6e3acfd4c5ce7a5356fa6db01e803c82d1a1caaaac25019474be940025855dd0",
-      "bytes": 75937
+      "bytes": 75937,
+      "sha256": "6e3acfd4c5ce7a5356fa6db01e803c82d1a1caaaac25019474be940025855dd0"
     },
     {
       "path": "res://assets/archive_pack/window-glass-left.png",
-      "sha256": "f712ddf2727d2931cb868109cbe1f92d006dd56e89c908a94ade0c7f0da94e5e",
-      "bytes": 76465
+      "bytes": 76465,
+      "sha256": "f712ddf2727d2931cb868109cbe1f92d006dd56e89c908a94ade0c7f0da94e5e"
     },
     {
       "path": "res://assets/archive_pack/window-glass-right.png",
-      "sha256": "9a39a3d01036f0fe6659edd7656e2e4a6331579d3f0b057ffa662eb29562cdb8",
-      "bytes": 77273
+      "bytes": 77273,
+      "sha256": "9a39a3d01036f0fe6659edd7656e2e4a6331579d3f0b057ffa662eb29562cdb8"
     },
     {
       "path": "res://assets/archive_pack/window-scene-left.png",
-      "sha256": "29f1fa5b326df81dc1d19cc030ff3958210c41f0cab6227195e7fce7009728cf",
-      "bytes": 74521
+      "bytes": 74521,
+      "sha256": "29f1fa5b326df81dc1d19cc030ff3958210c41f0cab6227195e7fce7009728cf"
     },
     {
       "path": "res://assets/archive_pack/window-scene-right.png",
-      "sha256": "28b4f67b274062f34af18c6294efae617532cb1bd2c89e666c8612eae5157b4e",
-      "bytes": 74642
+      "bytes": 74642,
+      "sha256": "28b4f67b274062f34af18c6294efae617532cb1bd2c89e666c8612eae5157b4e"
     },
     {
       "path": "res://assets/archive_pack/wood-cabinet-closed.png",
-      "sha256": "d4c59278d7f64d53e858b5ace007244759a228b64136a80593611f070ef78913",
-      "bytes": 73462
+      "bytes": 73462,
+      "sha256": "d4c59278d7f64d53e858b5ace007244759a228b64136a80593611f070ef78913"
     },
     {
       "path": "res://assets/archive_pack/wood-cabinet-open.png",
-      "sha256": "18b0b2cf25447acf3bf01ded675f3d8dda2d5ad6cbbe278a2de4ee2def7b29cd",
-      "bytes": 73860
+      "bytes": 73860,
+      "sha256": "18b0b2cf25447acf3bf01ded675f3d8dda2d5ad6cbbe278a2de4ee2def7b29cd"
     },
     {
       "path": "res://assets/archive_pack/wool-rug.png",
-      "sha256": "3f5c5143c634b3db8c1f5e4ecca3b275bb8e8899efa2cf15c0aa8bb2f06e881e",
-      "bytes": 115371
+      "bytes": 115371,
+      "sha256": "3f5c5143c634b3db8c1f5e4ecca3b275bb8e8899efa2cf15c0aa8bb2f06e881e"
     }
-  ]
+  ],
+  "layout": "res://assets/archive_pack/calibrated-layout.json",
+  "grid": {
+    "canvas": [
+      2000,
+      2000
+    ],
+    "origin": [
+      1054,
+      756
+    ],
+    "x_axis": [
+      55.5,
+      27.75
+    ],
+    "y_axis": [
+      -55.5,
+      27.75
+    ],
+    "z_axis": [
+      0,
+      -83.25
+    ],
+    "space": [
+      16,
+      18,
+      5.5
+    ]
+  }
 }
