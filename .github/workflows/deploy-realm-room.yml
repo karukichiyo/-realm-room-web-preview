@@ -64,6 +64,9 @@ jobs:
           (site/'sw.js').write_text(sw)
           (site/'release.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n')
           assert old not in index and old not in sw
+          for stale in site.glob('realm-room-*'):
+              if stale.is_file() and not stale.name.startswith(new + '.'):
+                  stale.unlink()
           PY
       - uses: actions/configure-pages@v5
         with:
